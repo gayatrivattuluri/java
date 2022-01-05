@@ -14,7 +14,7 @@ pipeline {
       }
       stage('deploy') {
          steps {
-            deploy adapters: [tomcat8(credentialsId: '7c7f0fc4-b2df-4edc-bbee-f795416dcace', path: '', url: 'http://localhost:9999')], contextPath: 'jenkinspipeline', war: 'productweb\\target\\productweb.war'
+            deploy adapters: [tomcat8(credentialsId: 'tomcat', path: '', url: 'http://localhost:9999')], contextPath: 'jenkinspipeline', war: 'productweb\\\\target\\\\productweb.war'
          }
       }
    }
